@@ -3,193 +3,173 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kanu Studio — Agent WhatsApp de service client pour PME</title>
-<meta name="description" content="Nous installons un agent IA qui répond à vos clients sur WhatsApp 24h/24, prend vos commandes et vous transfère les cas importants. Livré en 7 à 15 jours.">
+<title>Zawena — Démonstrateur d'agent WhatsApp</title>
+<meta name="description" content="Essayez en direct l'agent WhatsApp de Zawena : il répond aux clients, prend les commandes et passe la main à un humain quand il faut.">
 <style>
-  :root{--navy:#0b2545;--blue:#1b6ca8;--gold:#e39a1c;--ink:#1e2833;--grey:#5a6675;--bg:#f5f8fb;--line:#d8e3ee}
+  :root{--ink:#0f1720;--navy:#0b2545;--blue:#1b6ca8;--green:#075e54;--green2:#128c7e;--bubble:#dcf8c6;--line:#dde6ef;--grey:#5a6675;--bg:#f4f7fa}
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.6;background:#fff;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:820px;margin:0 auto;padding:0 20px}
-  header{background:var(--navy);color:#fff;padding:14px 0}
-  header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px}
-  .logo{font-weight:800;letter-spacing:.5px;font-size:17px}
-  .logo span{color:var(--gold)}
-  .topcta{background:var(--gold);color:#1a1205;font-weight:700;font-size:13px;padding:9px 14px;border-radius:6px;text-decoration:none;white-space:nowrap}
-  .hero{background:linear-gradient(180deg,#0b2545 0%,#123a63 100%);color:#fff;padding:52px 0 46px}
-  .hero h1{font-size:30px;line-height:1.25;font-weight:800;margin-bottom:14px}
-  .hero h1 em{color:var(--gold);font-style:normal}
-  .hero p{font-size:16.5px;color:#c7d9ea;max-width:620px}
-  .hero .cta{display:inline-block;margin-top:22px;background:var(--gold);color:#1a1205;font-weight:700;padding:14px 22px;border-radius:8px;text-decoration:none;font-size:15.5px}
-  section{padding:44px 0;border-bottom:1px solid var(--line)}
-  h2{font-size:22px;color:var(--navy);margin-bottom:14px;font-weight:800}
-  h3{font-size:16px;color:var(--navy);margin:18px 0 6px}
-  p{margin-bottom:12px}
-  .muted{color:var(--grey)}
-  ul{margin:8px 0 14px 20px}
-  li{margin-bottom:7px}
-  .cards{display:grid;grid-template-columns:1fr;gap:14px;margin-top:16px}
-  @media(min-width:680px){.cards.three{grid-template-columns:1fr 1fr 1fr}.hero h1{font-size:36px}}
-  .card{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:16px}
-  .card b{display:block;color:var(--navy);margin-bottom:6px}
-  .price{display:grid;grid-template-columns:1fr;gap:16px;margin-top:18px}
-  @media(min-width:680px){.price{grid-template-columns:1fr 1fr 1fr}}
-  .tier{border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column}
-  .tier.hot{border:2px solid var(--gold);background:#fffdf7}
-  .tier .amt{font-size:24px;font-weight:800;color:var(--navy);margin:8px 0 2px}
-  .tier .sub{font-size:12.5px;color:var(--grey);margin-bottom:12px}
-  .tier ul{margin-left:18px;font-size:14.5px}
-  .badge{background:var(--gold);color:#1a1205;font-size:11px;font-weight:800;padding:3px 8px;border-radius:20px;align-self:flex-start;letter-spacing:.4px}
-  .note{background:#eef3f8;border-left:4px solid var(--blue);padding:13px 15px;border-radius:0 8px 8px 0;font-size:14.5px;margin:16px 0}
-  .warn{background:#fbedea;border-left:4px solid #b03a2e;padding:13px 15px;border-radius:0 8px 8px 0;font-size:14.5px;margin:16px 0}
-  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
-  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
-  th{background:var(--navy);color:#fff;font-size:13px}
-  details{border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin-bottom:10px;background:var(--bg)}
-  summary{cursor:pointer;font-weight:700;color:var(--navy)}
-  details p{margin-top:9px}
-  footer{background:var(--navy);color:#c7d9ea;padding:28px 0;font-size:13.5px}
-  footer a{color:var(--gold)}
-  .stag{background:#fff4d6;border:1px dashed var(--gold);color:#6b4a00;font-size:13px;padding:10px 14px;border-radius:8px;margin:14px 0 0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+  .wrap{max-width:880px;margin:0 auto;padding:0 18px}
+  header{background:var(--navy);color:#fff;padding:13px 0}
+  header .wrap{display:flex;justify-content:space-between;align-items:center}
+  .logo{font-weight:800;font-size:17px;letter-spacing:.4px}.logo span{color:#e39a1c}
+  header a{color:#e39a1c;font-weight:700;font-size:13.5px;text-decoration:none}
+  .intro{padding:34px 0 10px;text-align:center}
+  .intro h1{font-size:27px;color:var(--navy);line-height:1.25;margin-bottom:12px}
+  .intro p{color:var(--grey);max-width:600px;margin:0 auto 8px}
+  .scen{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:18px 0 6px}
+  .scen button{border:1px solid var(--line);background:#fff;color:var(--navy);font-weight:600;font-size:13.5px;padding:9px 14px;border-radius:20px;cursor:pointer;transition:.15s}
+  .scen button:hover{border-color:var(--blue);color:var(--blue)}
+  .scen button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+  .phone{max-width:390px;margin:20px auto 0;border:9px solid #111a24;border-radius:30px;overflow:hidden;box-shadow:0 18px 45px rgba(11,37,69,.22);background:#e5ddd5}
+  .phead{background:var(--green);color:#fff;padding:11px 13px;display:flex;align-items:center;gap:10px}
+  .av{width:34px;height:34px;border-radius:50%;background:var(--green2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+  .phead .nm{font-weight:700;font-size:14.5px;line-height:1.2}
+  .phead .st{font-size:11.5px;color:#c8f3e7}
+  .chat{height:430px;overflow-y:auto;padding:14px 12px;background-image:radial-gradient(#d9d2c7 1px,transparent 1px);background-size:22px 22px}
+  .msg{max-width:80%;padding:8px 11px;border-radius:9px;font-size:14px;margin-bottom:9px;line-height:1.45;box-shadow:0 1px 1px rgba(0,0,0,.08);white-space:pre-wrap;word-wrap:break-word}
+  .them{background:#fff;border-top-left-radius:1px}
+  .us{background:var(--bubble);margin-left:auto;border-top-right-radius:1px}
+  .t{display:block;font-size:10.5px;color:#8a9aa8;text-align:right;margin-top:3px}
+  .typing{background:#fff;width:52px;border-radius:9px;padding:10px 12px;margin-bottom:9px}
+  .typing i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#9aa8b5;margin-right:3px;animation:b 1.2s infinite}
+  .typing i:nth-child(2){animation-delay:.2s}.typing i:nth-child(3){animation-delay:.4s}
+  @keyframes b{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-4px);opacity:1}}
+  .pfoot{background:#f0f0f0;padding:9px 12px;display:flex;gap:8px;align-items:center}
+  .pfoot .inp{flex:1;background:#fff;border-radius:18px;padding:8px 13px;font-size:13.5px;color:#9aa8b5}
+  .pfoot .snd{width:34px;height:34px;border-radius:50%;background:var(--green2);display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px}
+  .why{padding:38px 0}
+  .why h2{font-size:21px;color:var(--navy);margin-bottom:14px}
+  .grid{display:grid;grid-template-columns:1fr;gap:13px}
+  @media(min-width:700px){.grid{grid-template-columns:1fr 1fr 1fr}.intro h1{font-size:33px}}
+  .card{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:15px;font-size:14.5px}
+  .card b{display:block;color:var(--navy);margin-bottom:5px}
+  .cta{background:var(--navy);color:#fff;text-align:center;padding:34px 0;margin-top:10px}
+  .cta h2{color:#fff;font-size:22px;margin-bottom:10px}
+  .cta p{color:#c7d9ea;margin-bottom:18px}
+  .btn{display:inline-block;background:#e39a1c;color:#1a1205;font-weight:700;padding:14px 22px;border-radius:8px;text-decoration:none;font-size:15.5px}
+  .note{max-width:640px;margin:16px auto 0;font-size:12.5px;color:#8fa9c4}
+  footer{background:#0b2545;color:#8fa9c4;padding:22px 0;font-size:12.5px;text-align:center}
 </style>
 </head>
 <body>
 
-<header>
-  <div class="wrap">
-    <div class="logo">KANU <span>STUDIO</span></div>
-    <a class="topcta" href="#contact">Diagnostic gratuit</a>
-  </div>
-</header>
+<header><div class="wrap"><div class="logo">ZAWENA <span>·</span> DÉMONSTRATEUR</div><a href="https://wa.me/2250705260330">Nous écrire sur WhatsApp</a></div></header>
 
-<div class="hero">
-  <div class="wrap">
-    <h1>Vos clients vous écrivent sur WhatsApp.<br>Vous répondez <em>trop tard</em>.</h1>
-    <p>Nous installons un agent IA sur votre numéro WhatsApp Business : il répond à votre place 24h/24, prend les commandes, encaisse et vous transfère les cas importants. Livré en 7 à 15 jours.</p>
-    <a class="cta" href="#contact">Réserver un diagnostic gratuit de 30 minutes</a>
+<div class="intro wrap">
+  <h1>Voici ce que vos clients verraient sur WhatsApp</h1>
+  <p>Choisissez une situation, puis regardez l'agent répondre. C'est une simulation : les réponses sont pré-écrites pour la démonstration. Chez vous, l'agent apprend votre catalogue et vos règles.</p>
+  <div class="scen">
+    <button data-s="prix" class="on">Demande de prix</button>
+    <button data-s="commande">Passer une commande</button>
+    <button data-s="reclam">Client mécontent</button>
   </div>
 </div>
 
-<section>
-  <div class="wrap">
-    <h2>Le problème que vous connaissez déjà</h2>
-    <div class="cards three">
-      <div class="card"><b>Les messages du soir</b>Un client écrit à 20h un samedi. Personne ne répond. Lundi, il a acheté ailleurs.</div>
-      <div class="card"><b>Le tri impossible</b>Des dizaines de conversations mélangées. Vos commerciaux traitent dans l'ordre d'arrivée, pas par valeur.</div>
-      <div class="card"><b>Les commandes perdues</b>Une commande prise de vive voix n'est jamais enregistrée. Aucun suivi, aucune relance.</div>
-    </div>
-    <p class="muted" style="margin-top:16px">Ces constats sont documentés sur le marché : un prestataire ivoirien décrit un cas typique de <b>500 conversations par jour</b> avec un délai de réponse de <b>2 heures</b>, ramené à <b>5 minutes</b> après automatisation. Ce chiffre provient de son cas publié et doit être revalidé chez vous.</p>
+<div class="phone">
+  <div class="phead">
+    <div class="av" id="av">EB</div>
+    <div><div class="nm" id="biz">Boutique Élégance — Cocody</div><div class="st">en ligne · répond instantanément</div></div>
   </div>
-</section>
+  <div class="chat" id="chat"></div>
+  <div class="pfoot"><div class="inp">Écrivez un message…</div><div class="snd">➤</div></div>
+</div>
 
-<section>
-  <div class="wrap">
-    <h2>Ce que fait concrètement l'agent</h2>
-    <ul>
-      <li>Répond aux questions fréquentes : prix, horaires, disponibilité, livraison.</li>
-      <li>Présente votre catalogue et prend la commande.</li>
-      <li>Calcule les frais de livraison et confirme la commande.</li>
-      <li>Encaisse par mobile money (Orange Money, MTN MoMo, Moov, Wave).</li>
-      <li>Passe la main à un humain dès qu'un cas est sensible ou complexe.</li>
-      <li>Vous donne un tableau de bord : conversations, commandes, messages non résolus.</li>
-    </ul>
-    <div class="note"><b>Il ne remplace personne.</b> Il absorbe les échanges répétitifs et transfère le reste. Votre équipe garde le contrôle et voit tout.</div>
+<div class="why wrap">
+  <h2>Pourquoi ça change quelque chose</h2>
+  <div class="grid">
+    <div class="card"><b>Il ne dort jamais</b>Un client qui écrit à 22h un dimanche reçoit une réponse tout de suite, pas le lundi matin.</div>
+    <div class="card"><b>Il ne perd rien</b>Chaque commande est enregistrée. Plus de commandes prises de vive voix et oubliées.</div>
+    <div class="card"><b>Il passe la main</b>Dès qu'une situation est sensible, un humain prend le relais. Vous gardez le contrôle.</div>
   </div>
-</section>
+</div>
 
-<section>
+<div class="cta">
   <div class="wrap">
-    <h2>Comment ça se passe</h2>
-    <div class="cards three">
-      <div class="card"><b>1. Diagnostic — 30 min, gratuit</b>Nous analysons vos conversations réelles et calculons combien de messages sont restés sans réponse.</div>
-      <div class="card"><b>2. Mise en place — 7 à 15 jours</b>Nous branchons l'agent sur votre numéro WhatsApp Business et votre catalogue.</div>
-      <div class="card"><b>3. Mesure — 30 jours</b>Nous comparons le délai de réponse et les commandes avant et après. Résultats écrits.</div>
-    </div>
+    <h2>Vous voulez la même chose sur votre numéro ?</h2>
+    <p>30 minutes de diagnostic gratuit. Nous analysons vos conversations réelles et nous vous donnons un chiffre : combien de messages sont restés sans réponse le mois dernier.</p>
+    <a class="btn" href="https://wa.me/2250705260330?text=Bonjour%20Zawena%2C%20je%20souhaite%20un%20diagnostic%20gratuit%20pour%20mon%20entreprise">Demander mon diagnostic gratuit</a>
+    <p class="note">Démonstration à but illustratif. Les réponses affichées sont pré-écrites et ne proviennent pas d'un système connecté à un vrai numéro WhatsApp. Aucun résultat commercial n'est garanti.</p>
   </div>
-</section>
+</div>
 
-<section>
-  <div class="wrap">
-    <h2>Nos offres</h2>
-    <p class="muted">Prix en francs CFA. Conversion indicative en euros au taux de 655,957 FCFA pour 1 €.</p>
-    <div class="price">
-      <div class="tier">
-        <span class="badge">PILOTE</span>
-        <div class="amt">150 000 FCFA</div>
-        <div class="sub">≈ 229 € — installation, puis 75 000 FCFA/mois (≈ 114 €)</div>
-        <ul>
-          <li>1 numéro WhatsApp Business</li>
-          <li>Questions fréquentes et catalogue</li>
-          <li>Prise de commande simple</li>
-          <li>Transfert à un humain</li>
-          <li>Tableau de bord de base</li>
-        </ul>
-      </div>
-      <div class="tier hot">
-        <span class="badge">RECOMMANDÉ</span>
-        <div class="amt">450 000 FCFA</div>
-        <div class="sub">≈ 686 € — installation, puis 150 000 FCFA/mois (≈ 229 €)</div>
-        <ul>
-          <li>Tout le Pilote, plus :</li>
-          <li>Catalogue complet et recommandations</li>
-          <li>Paiement mobile money intégré</li>
-          <li>Relances automatiques de paniers abandonnés</li>
-          <li>Rapports hebdomadaires</li>
-        </ul>
-      </div>
-      <div class="tier">
-        <span class="badge">PRO</span>
-        <div class="amt">900 000 FCFA</div>
-        <div class="sub">≈ 1 372 € — installation, puis 250 000 FCFA/mois (≈ 381 €)</div>
-        <ul>
-          <li>Tout le Standard, plus :</li>
-          <li>Plusieurs numéros ou points de vente</li>
-          <li>Intégration à votre logiciel de gestion</li>
-          <li>Formation de votre équipe (2 jours)</li>
-          <li>Accompagnement dédié</li>
-        </ul>
-      </div>
-    </div>
-    <div class="note"><b>Frais WhatsApp / Meta en plus, refacturés au réel.</b> Comptez environ 0,02 $ par message. Meta offre 1 000 conversations de service gratuites par mois (tarification en vigueur depuis le 1er juillet 2025).</div>
-  </div>
-</section>
+<footer>Zawena — agents IA et automatisation pour entreprises · Abidjan, Côte d'Ivoire · elfriedyobouet@gmail.com</footer>
 
-<section>
-  <div class="wrap">
-    <h2>Notre engagement</h2>
-    <p>Nous nous engageons sur un résultat mesurable : <b>le délai de première réponse</b>. S'il ne s'améliore pas sur les 30 premiers jours du pilote, l'abonnement du mois est offert. Le calcul est fait sur vos propres chiffres, pas sur les nôtres.</p>
-    <div class="warn"><b>Ce que nous ne promettons pas :</b> un chiffre de ventes garanti. Nous améliorons la vitesse et la couverture de vos réponses ; le reste dépend de votre offre et de votre marché.</div>
-  </div>
-</section>
+<script>
+const CHATS = {
+  prix: {biz:"Boutique Élégance — Cocody", av:"BE", msgs:[
+    ["them","Bonsoir, combien coûte le sac en cuir noir que vous avez mis en story ?"],
+    ["us","Bonsoir ! Le sac en cuir noir est à 18 500 FCFA. Il est disponible en noir et en marron. Vous le voulez dans quelle couleur ?"],
+    ["them","Noir. Vous livrez à Yopougon ?"],
+    ["us","Oui, livraison à Yopougon : 1 500 FCFA, livré demain avant 18h. Total avec le sac : 20 000 FCFA.\nJe vous enregistre la commande ?"],
+    ["them","Oui allez-y"],
+    ["us","Commande enregistrée ✅\n1 sac cuir noir — 18 500 FCFA\nLivraison Yopougon — 1 500 FCFA\nTotal : 20 000 FCFA\n\nVous réglez par Wave ou Orange Money ? Je vous envoie le numéro."]
+  ]},
+  commande: {biz:"Poulet Braisé du Plateau", av:"PB", msgs:[
+    ["them","Bonsoir, c'est encore possible de commander ?"],
+    ["us","Bonsoir ! Oui, nous servons jusqu'à 22h.\nAujourd'hui : poulet braisé entier 6 000 FCFA, demi 3 500 FCFA. Accompagnement attiéké ou frites, offert."],
+    ["them","2 poulets entiers avec attiéké, livraison à Cocody Angré"],
+    ["us","Noté 👍\n2 poulets braisés entiers — 12 000 FCFA\n2 attiéké — offerts\nLivraison Angré — 1 000 FCFA\nTotal : 13 000 FCFA\n\nDélai estimé : 45 minutes. Je confirme avec la cuisine ?"],
+    ["them","Oui, et ajoute 2 jus de gingembre"],
+    ["us","Ajouté ✅ 2 jus de gingembre — 1 500 FCFA.\nNouveau total : 14 500 FCFA.\n\nCommande transmise en cuisine, livraison prévue vers 20h15. Bon appétit ! 🍗"]
+  ]},
+  reclam: {biz:"Clinique Santé Plus — Marcory", av:"CS", msgs:[
+    ["them","J'ai pris rendez-vous pour demain 9h mais je ne peux plus venir. Et personne ne répond au téléphone !"],
+    ["us","Je comprends, et je suis désolé pour l'attente au téléphone.\nJe peux déplacer votre rendez-vous directement ici. Quelles sont vos disponibilités cette semaine ?"],
+    ["them","Jeudi matin si possible"],
+    ["us","Jeudi 9h30 avec le Dr Konan est libre. Je le réserve ?"],
+    ["them","Oui parfait"],
+    ["us","C'est fait ✅ Rendez-vous jeudi à 9h30, Dr Konan.\nVous recevrez un rappel la veille à 18h et un autre jeudi à 8h.\n\nJe transmets aussi votre remarque sur le téléphone à la direction — c'est noté de mon côté."],
+    ["us","Un membre de l'équipe reprend la conversation si vous préférez parler à quelqu'un. 👤"]
+  ]}
+};
 
-<section>
-  <div class="wrap">
-    <h2>Questions fréquentes</h2>
-    <details><summary>Est-ce que je garde mon numéro WhatsApp actuel ?</summary><p>Oui. Nous utilisons votre numéro WhatsApp Business existant. Vos clients ne changent rien à leurs habitudes.</p></details>
-    <details><summary>Est-ce que mes données sont protégées ?</summary><p>Nous traitons les données clients conformément à la réglementation locale. En Côte d'Ivoire (loi 2013-450) et au Sénégal (loi 2008-12), une déclaration auprès de l'autorité de protection des données est requise : nous vous accompagnons dans cette démarche, qui reste à votre nom.</p></details>
-    <details><summary>Combien de temps avant que ça marche ?</summary><p>L'agent est en ligne en 7 à 15 jours selon la complexité de votre catalogue. Les premiers résultats sur le délai de réponse sont visibles dès la première semaine.</p></details>
-    <details><summary>Et si je n'ai pas de catalogue structuré ?</summary><p>C'est le cas le plus fréquent. Nous construisons le catalogue à partir de vos conversations et de vos documents existants.</p></details>
-    <details><summary>Puis-je arrêter quand je veux ?</summary><p>L'abonnement est mensuel et sans engagement de durée. Seule l'installation est due une fois.</p></details>
-  </div>
-</section>
+const chat = document.getElementById('chat');
+let timer = null;
 
-<section id="contact">
-  <div class="wrap">
-    <h2>Réserver votre diagnostic gratuit</h2>
-    <p>30 minutes, en visio ou par téléphone. Nous analysons vos conversations réelles et vous repartez avec un chiffre : combien de messages sont restés sans réponse le mois dernier.</p>
-    <div class="stag">
-      <b>À COMPLÉTER AVANT DIFFUSION PUBLIQUE</b><br>
-      Contact : [NUMÉRO WHATSAPP PROFESSIONNEL À DÉFINIR]<br>
-      E-mail : [ADRESSE E-MAIL PROFESSIONNELLE À DÉFINIR]
-    </div>
-  </div>
-</section>
+function now(){const d=new Date();return d.getHours().toString().padStart(2,'0')+":"+d.getMinutes().toString().padStart(2,'0');}
 
-<footer>
-  <div class="wrap">
-    <p><b>Kanu Studio</b> — Agents IA de service client pour les PME d'Afrique francophone.</p>
-    <p class="muted" style="color:#8fa9c4;margin-top:8px">Les chiffres de marché cités sur cette page proviennent de sources publiques 2024-2026. Les résultats annoncés chez d'autres entreprises sont des cas publiés par leurs prestataires et ne constituent pas une garantie de résultat.</p>
-  </div>
-</footer>
+function add(who, text){
+  const d=document.createElement('div');
+  d.className='msg '+(who==='them'?'them':'us');
+  d.textContent=text;
+  const t=document.createElement('span');t.className='t';t.textContent=now();
+  d.appendChild(t);
+  chat.appendChild(d);
+  chat.scrollTop=chat.scrollHeight;
+  return d;
+}
 
+function typing(){
+  const d=document.createElement('div');
+  d.className='typing';d.innerHTML='<i></i><i></i><i></i>';
+  chat.appendChild(d);chat.scrollTop=chat.scrollHeight;
+  return d;
+}
+
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+
+async function play(key){
+  if(timer){clearTimeout(timer);timer=null;}
+  const c=CHATS[key];
+  document.getElementById('biz').textContent=c.biz;
+  document.getElementById('av').textContent=c.av;
+  chat.innerHTML='';
+  for(const [who,txt] of c.msgs){
+    if(who==='them'){ add('them',txt); await sleep(900); }
+    else { const tp=typing(); await sleep(700+Math.min(txt.length*9,1500)); tp.remove(); add('us',txt); await sleep(900); }
+  }
+}
+
+document.querySelectorAll('.scen button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.scen button').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    play(b.dataset.s);
+  });
+});
+
+play('prix');
+</script>
 </body>
 </html>

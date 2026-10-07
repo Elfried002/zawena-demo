@@ -1,3 +1,5 @@
-# Kanu Studio
+# Zawena - demonstrateur agent WhatsApp
 
-Site vitrine et support commercial de Kanu Studio — agents IA de service client WhatsApp pour PME d Afrique francophone.
+Page de demonstration interactive de l agent WhatsApp de Zawena.
+
+Publiee sur GitHub Pages.
